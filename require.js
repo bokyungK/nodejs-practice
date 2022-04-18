@@ -1,6 +1,4 @@
-const value = require('./export.js');
-const odd = value.odd;
-const even = value.even;
+const {odd, even} = require('./export.js');
 
 for (i=0; i<10; i++) {
     if (i%2 === 0) {
