@@ -10,4 +10,5 @@ readStream.pipe(writeStream); // 서로 파이프로 연결했기 때문에, rea
 // 파일을 압축해서 사용하기
 // const readStream = fs.createReadStream('./readme3.txt', { highWaterMark: 16 });
 // const zlibStream = zlib.createGzip();
-// readStream.pipe(zlibStream).pipe(writeStream);
+// const writeStream = fs.createWriteStream('./writeme4.txt.gz');
+// readStream.pipe(zlibStream).pipe(writeStream);  // 다양한 파이프끼리 연결할 수 있다.(파이프를 지원하는 것 끼리만 가능)
