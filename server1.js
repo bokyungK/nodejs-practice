@@ -4,6 +4,7 @@ const http = require('http');
 const server = http.createServer((req, res) => { 
     // 서버에 요청이 들어오면 실행되는 함수
 
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }) // 사파리 대응용, 한글 깨짐 방지
     // 응답하기 (이것도 스트림이다.)
     res.write('<h1>Hello Node!</h1>');
     res.write('<p>Hello server</p>');
