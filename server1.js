@@ -21,3 +21,12 @@ server.on('listening', () => { // .listen의 콜백 함수를 이벤트로 따�
 server.on('error', (error) => {
     console.error(error);
 });
+
+// 다른 포트를 이용해 서버를 하나 더 생성
+const server1 = http.createServer((req, res) => { 
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+    res.write('<h1>Hello Node!</h1>');
+    res.write('<p>Hello server</p>');
+    res.end('<p>Hello ZeroCho</p>');
+})
+    .listen(8081);
